@@ -9,6 +9,8 @@ function Subscriber(){
     this.homeContainer = $('.home-container');
     this.subscribeHeader = $('.subscribe-header');
     this.subscribeFooter = $('.subscribe-footer');
+    this.subscribeMain = $('.subscriber-main');
+    this.subscribeMain.hide();
     this.subscribeStep1 = $('.subscriber-main-step-1');
     this.subscribeStep2 = $('.subscriber-main-step-2');
 
@@ -130,6 +132,7 @@ function Subscriber(){
     }
 
     this.step0 = () => {
+        this.subscribeMain.show();
         this.homeContainer.hide();
         this.subscribeHeader.show();
         this.subscribeFooter.hide();
@@ -164,6 +167,7 @@ function Subscriber(){
         this.subscribeFooter.hide();
         this.subscribeStep1.hide();
         this.subscribeStep2.hide();
+        this.subscribeMain.hide();
         this.subscribeShowFormLink.hide();
         setTimeout(() => this.showMessage(SUCCESSFULLY_MESSAGE), DEFAULT_ANIMATION_DELAY_START);
     }

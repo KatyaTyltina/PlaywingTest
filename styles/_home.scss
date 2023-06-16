@@ -42,6 +42,10 @@ a, a:not([href]):not([class]){
 
 main.home-page{
   padding-bottom: 33px;
+  min-height: calc(100vh - 69px - 118px);
+}
+.main{
+  min-height: calc(100vh - 69px - 118px);
 }
 .account-box{
   width: 20%;
@@ -171,6 +175,7 @@ p{
     font-family: 'Inter', sans-serif;
     color: $basic-white!important;
     font-weight: 600;
+    text-decoration: none;
     span{
       line-height: 29px;
     }
@@ -178,7 +183,7 @@ p{
 }
 
 .arrows-box{
-  display: flex;
+  display: flex!important;
   flex-direction: row;
   justify-content: center;
   margin-top: 15px;
@@ -219,9 +224,9 @@ p{
   line-height: 49px;
   padding: 0;
   background: rgb(50,226,142);
-  background: -moz-linear-gradient(0deg, rgba(50,226,142,1) 180%, rgba(25,201,116,1) 100%);
-  background: -webkit-linear-gradient(0deg, rgba(50,226,142,1) 180%, rgba(25,201,116,1) 100%);
-  background: linear-gradient(0deg, rgba(50,226,142,1) 180%, rgba(25,201,116,1) 100%);
+  background: -moz-linear-gradient(180deg, rgba(50,226,142,1) 0%, rgba(25,201,116,1) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(50,226,142,1) 0%, rgba(25,201,116,1) 100%);
+  background: linear-gradient(180deg, rgba(50,226,142,1) 0%, rgba(25,201,116,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#32e28e",endColorstr="#19c974",GradientType=1);
 }
 .btn.inactive{
@@ -302,9 +307,9 @@ input[type=text], input[type=phone]{
   right: 0;
   height: 100%;
   background: rgb(50,226,142);
-  background: -moz-linear-gradient(0deg, rgba(50,226,142,1) 0%, rgba(25,201,116,1) 100%);
-  background: -webkit-linear-gradient(0deg, rgba(50,226,142,1) 0%, rgba(25,201,116,1) 100%);
-  background: linear-gradient(0deg, rgba(50,226,142,1) 0%, rgba(25,201,116,1) 100%);
+  background: -moz-linear-gradient(180deg, rgba(50,226,142,1) 0%, rgba(25,201,116,1) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(50,226,142,1) 0%, rgba(25,201,116,1) 100%);
+  background: linear-gradient(180deg, rgba(50,226,142,1) 0%, rgba(25,201,116,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#32e28e",endColorstr="#19c974",GradientType=1);
   i{
     background-image: url("/img/phone-correct.svg");
@@ -386,6 +391,7 @@ input[type=text], input[type=phone]{
     background-size: 10px 5px;
     margin-right: 10px;
     margin-left: 10px;
+    transition: all 0.6s ease-out;
   }
   + .active{
     i{
@@ -397,6 +403,17 @@ input[type=text], input[type=phone]{
   }
 }
 
+.sub-link.active i{
+  transform: rotate(180deg);
+}
+.sub-link .more, .sub-link .less{
+  font-size: 16px;
+}
+
+
+.message-id-successfully{
+  font-size: 14px;
+}
 .disclaimer{
   color: #EBEBEB;
   line-height: 14px;
@@ -745,9 +762,12 @@ footer {
   width: 139px;
   height: 26px;
 }
-
+.buttons-footer > li{
+  list-style:none;
+}
 .green-btn{
   background-color: #AED300;
+  list-style: none;
   color: #000000;
   font-weight: 600;
   width: 136px;
@@ -757,11 +777,14 @@ footer {
   display: block;
   line-height: 42px;
   text-decoration: none;
-  + .green-btn{
-    margin-left: 16px;
-  }
+}
+.buttons-footer li + li{
+  margin-left: 16px;
 }
 
+.show-subscribe-form span{
+  display: block;
+}
 .buttons-footer{
   display: flex;
   flex-direction: row;
