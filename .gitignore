@@ -20,4 +20,4 @@
 ###< symfony/phpunit-bridge ###
 
 .idea
-/public/assets
+/public/build

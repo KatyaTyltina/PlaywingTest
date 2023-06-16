@@ -1,1 +1,1 @@
-sass styles/main.scss public/assets/style.css
+sass styles/main.scss public/build/style.css

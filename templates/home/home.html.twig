@@ -1,0 +1,310 @@
+{% extends 'base.html.twig' %}
+
+{% block javascripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/assets/js/owl.carousel.js"></script>
+    <script src="/assets/js/inputmask.min.js"></script>
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/owl.theme.default.min.css">
+{% endblock %}
+
+{% block body %}
+    <section class="subscription-status">
+        <div class="container-fluid padding-8">
+            <div class="container">
+                <div class="row">
+                    <div class="attention-box col-sm-12">
+                        <span id="message-id-successfully">{{ translator.trans('successfully_message') }}</span>
+                        <span id="message-id-resend">{{ translator.trans('successfully_resend') }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="home-container">
+        <header class="main-header">
+            <div class="container">
+                <div class="row">
+                    <div class="menu-icon-box col-sm-3"><a onClick=""><i class="menu-icon"></i></a></div>
+                    <div class="logo-box col-sm-6">
+                        <a href="/">
+                            <img src="/img/bite-main-logo.svg" class="main-logo" alt="Jazz Logo"/>
+                        </a>
+                    </div>
+                    <div class="account-box col-sm-3">
+                        <i></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="home-page m-font no-padding">
+            <section class="banner-slider">
+                <div class="container-fluid no-padding">
+                    <div class="owl-carousel">
+                        <div><img src="/img/game-slider-1.png" alt="Play Am Nyam Game"></div>
+                        <div><img src="/img/game-slider-2.png" alt="Play Bomber Games"></div>
+                        <div><img src="/img/game-slider-3.png" alt="Play Bomber Games"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="button-subscribe">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="button-box col-sm-12">
+                            <button type="button" class="btn btn-accent subscribe-me"><span>{{ translator.trans('subscribe') }}</span></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="separator"></div>
+            <section class="games-cube-list">
+                <div class="container-fluid padding-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="games-container">
+                                <div class="block-title col-sm-12">
+                                    <h2><span>{{ translator.trans('new_games') }}</span><span class="games-number">6</span></h2>
+                                </div>
+                                <div class="game-list">
+                                    <div class="game-link-box col-sm-4">
+                                        <a class="game-link" href="/new-game" target="_blank">
+                                            <img src="/img/mystic.png" alt="Mystic Pillars" />
+                                        </a>
+                                    </div>
+                                    <div class="game-link-box col-sm-4">
+                                        <a class="game-link" href="/new-game" target="_blank">
+                                            <img src="/img/stick-hero.png" alt="Stick Hero" />
+                                        </a>
+                                    </div>
+                                    <div class="game-link-box col-sm-4">
+                                        <a class="game-link " href="/new-game"  target="_blank">
+                                            <img src="/img/gods.png" alt="Gods vs Humans" />
+                                        </a>
+                                    </div>
+                                    <div class="game-link-box col-sm-4">
+                                        <a class="game-link" href="/new-game" target="_blank">
+                                            <img src="/img/ghosts.png" alt="Ghosts and Goblins" />
+                                        </a>
+                                    </div>
+                                    <div class="game-link-box col-sm-4">
+                                        <a class="game-link" href="/new-game" target="_blank">
+                                            <img src="/img/freeze.png" alt="Freeze 2 Brothers" />
+                                        </a>
+                                    </div>
+                                    <div class="game-link-box col-sm-4">
+                                        <a class="game-link" href="/new-game" target="_blank">
+                                            <img src="/img/adventure_time.png" alt="Adventure Time" />
+                                        </a>
+                                    </div>
+
+                                </div>
+                                <a class="show-link" href="/games-list">
+                                    {{ translator.trans('more_games') }}
+                                    <i></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="games-horizontal-list">
+                <div class="container-fluid">
+                    <div class="container">
+                        <div class="row">
+                            <div class="games-container">
+                                <div class="block-title col-sm-12">
+                                    <h2><span>Popular Games</span><span class="games-number">5</span></h2>
+                                </div>
+                                <div class="game-list horizontal-style">
+                                    <a class="game-link col-md-6 col-sm-12" href="/new-game" target="_blank">
+                                        <img src="/img/game1.png" alt="Ludo Legend" />
+                                    </a>
+                                    <a class="game-link col-md-6 col-sm-12" href="/new-game" target="_blank">
+                                        <img src="/img/game2.png" alt="Drag Car" />
+                                    </a>
+                                    <a class="game-link col-md-6 col-sm-12" href="/new-game"  target="_blank">
+                                        <img src="/img/game3.png" alt="Tower Crush" />
+                                    </a>
+                                    <a class="game-link col-md-6 col-sm-12" href="/new-game" target="_blank">
+                                        <img src="/img/game4.png" alt="Bois D'ark" />
+                                    </a>
+                                    <a class="game-link col-md-6 col-sm-12" href="/new-game" target="_blank">
+                                        <img src="/img/game-6.png" alt="Double Dragon Trilogy" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="main-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="buttons-footer">
+                        <li>
+                            <a href="#" target="_blank">{{ translator.trans('footer_contact') }}</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">{{ translator.trans('footer_faq') }}</a>
+                        </li>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="footer-box col-sm-12">
+                        <a href="/" class="footer-logo-box">
+                            <img class="logo-img logo-big" src="/img/b-g-big.svg" alt="Bite Games Logo" />
+                        </a>
+                        <small>{{ translator.trans('copyright') }}</small>
+                    </div>
+                </div>
+            </div>
+
+
+        </footer>
+    </div>
+    <div class="subscribe-header">
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="menu-left col-sm-6">{% if locate == "en" %}<a href="/pa">AR</a>{% else %}<a href="/en">EN</a>{% endif %}</div>
+                    <div class="jazz-logo-box col-sm-6">
+                        <img src="/img/jazz-2.svg" class="jazz-logo" alt="Jazz Logo"/>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="subscriber-main">
+        <div class="main">
+            <div class="container">
+                <div class="row">
+                    <div class="action-link col-sm-12">
+                        <a class="show-subscribe-form" href="#" >
+                            <span>{{ translator.trans('hello_message1') }}</span>
+                            <span>{{ translator.trans('hello_message2') }}</span>
+                            <span class="arrows-box">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="undertext col-sm-12">
+                        {{ translator.trans('step1_header') }}
+                    </div>
+
+                    <div class="subscriber-main-step-1">
+                        <form method="post" action="/">
+                            <div class="form-group col-sm-12">
+                                <label for="phone">{{ translator.trans('step1_inputphone') }}:</label>
+                                <div class="input-container">
+                                    <div class="phone-mask">+ 92</div>
+                                    <div class="phone-status ">
+                                        <i></i>
+                                    </div>
+                                    <input id="phone" data-inputmask = " 'mask' : '9999-9999999'" placeholder="XXX XXX XXX" class="form-control" type="text" required name="phone" />
+                                </div>
+                                <button type="button" class="btn inactive go-step-2">{{ translator.trans('getotp_button') }}</button>
+                            </div>
+                        </form>
+                        <div class="price col-sm-12">
+                            {{ translator.trans('subscribe_price') }}
+                        </div>
+                        <a class="sub-link read-more-link" href="#">
+                            <i></i>
+                            <span class="more">{{ translator.trans('read_more') }}</span>
+                            <span class="less">{{ translator.trans('read_less') }}</span>
+                            <i></i>
+                        </a>
+
+                        <div class="disclaimer locate-{{ locate }}">
+                            <p>{{ translator.trans('disclamer1_1') }}</p>
+                            <p>{{ translator.trans('disclamer1_2') }}</p>
+                            <p>{{ translator.trans('disclamer1_3') }}</p>
+                            <p>{{ translator.trans('disclamer1_4') }}</p>
+                        </div>
+                    </div>
+
+                    <div class="subscriber-main-step-2">
+                        <form method="post" action="/">
+                            <div class="form-group text-centered col-sm-12">
+                                <div class="title">{{ translator.trans('enterPIN') }}</div>
+                                <div class="pin-box">
+                                    <i class="lock-icon"></i>
+                                    <div class="pin-container">
+                                        <input data-inputmask = " 'mask' : '9'" type="text" name="pin" pattern="[0-9]{4}" maxlength="1" />
+                                        <input data-inputmask = " 'mask' : '9'" type="text" name="pin" pattern="[0-9]{4}" maxlength="1" />
+                                        <input data-inputmask = " 'mask' : '9'" type="text" name="pin" pattern="[0-9]{4}" maxlength="1" />
+                                        <input data-inputmask = " 'mask' : '9'" type="text" name="pin" pattern="[0-9]{4}" maxlength="1" />
+                                    </div>
+                                </div>
+
+                                <button type="button" class="btn inactive go-finish">{{ translator.trans('subscribe') }}</button>
+                            </div>
+                        </form>
+                        <div class="price col-sm-12">
+                            {{ translator.trans('subscribe_price') }}
+                        </div>
+                        <div class="subscribe-actions">
+                            <a class="resend-code" href="#">{{ translator.trans('resend') }}</a>
+                            <a class="return-step-1" href="#">{{ translator.trans('change_number') }}</a>
+                        </div>
+                        <a class="sub-link read-more-link" href="#">
+                            <i></i>
+                            <span class="more">{{ translator.trans('read_more') }}</span>
+                            <span class="less">{{ translator.trans('read_less') }}</span>
+                            <i></i>
+                        </a>
+
+                        <div class="disclaimer locate-{{ locate }}">
+                            <p>{{ translator.trans('disclamer1_1') }}</p>
+                            <p>{{ translator.trans('disclamer1_2') }}</p>
+                            <p>{{ translator.trans('disclamer1_3') }}</p>
+                            <p>{{ translator.trans('disclamer1_4') }}</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="subscribe-footer">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <nav class="footer-menu navbar col-sm-12">
+                        <ul>
+                            <li>
+                                <a href="#" target="_blank">{{ translator.trans('footer_tc') }}</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">{{ translator.trans('footer_contact') }}</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">{{ translator.trans('footer_faq') }}</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="row">
+                    <div class="footer-box col-sm-12">
+                        <a href="/" class="footer-logo-box">
+                            <img class="logo-img" src="/img/bite-games-logo.svg" alt="Bite Games Logo" />
+                        </a>
+                        <small>{{ translator.trans('copyright') }}</small>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+{% endblock %}

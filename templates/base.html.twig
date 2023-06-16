@@ -2,17 +2,23 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        <link rel="stylesheet" href="/assets/style.css"/>
-
+        <title>Premium Games</title>
+        <meta name="viewport" content="width=device-width">
+        <link rel="icon" type="image/png" rel="noopener" href="/favicon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@400;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
         {% block stylesheets %}
         {% endblock %}
 
+        <link rel="stylesheet" href="/build/style.css?version={{ css_version }}"/>
+
         {% block javascripts %}
         {% endblock %}
+
+        <script src="/assets/js/bite-games.js?version={{ css_version }}"></script>
     </head>
-    <body>
+    <body class="locate-{{ locate }}">
         {% block body %}{% endblock %}
     </body>
 </html>
